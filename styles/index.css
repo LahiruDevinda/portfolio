@@ -1,0 +1,163 @@
+:root {
+    --bg-color-1: aliceblue;
+    --bg-color-2: white;
+    --text-color-main: black;
+    --text-color-secondary: gray;
+    --button-color: rgb(234, 232, 255);
+    --filter: invert(0) brightness(0);
+    --primary-font: 'Poppins', sans-serif;
+    --heading-font: 'Inter', sans-serif;
+    --gradient: linear-gradient(90deg, #ee00ff, #3333ff);
+    --gradient-hover: linear-gradient(90deg, #c100cf, #2222ab);
+}
+
+[data-theme="dark"] {
+    --bg-color-1: aliceblue;
+    --bg-color-2: white;
+    --text-color-main: white;
+}
+
+.intro {
+    background-color: var(--bg-color-1);
+    padding: 50px;
+    padding-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 50px;
+
+}
+
+.intro-content {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.greeting {
+    color :#3333ff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.name {
+    color: var(--text-color-main);
+    font-size: 55px;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.designation {
+    color: var(--text-color-secondary);
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.intro-bio {
+    color: var(--text-color-secondary);
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.intro-buttons {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.cv-button {
+    height: 50px;
+    width: 200px;
+    color: white;
+    background: var(--gradient);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cv-button:hover {
+    background: var(--gradient-hover);
+}
+
+.cv-button-image {
+    height: 20px;
+    filter: invert(1) brightness(1.2);
+}
+
+.get-in-touch-button{
+    height: 50px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     font-size: 18px;
+    font-weight: 600;
+    border: 1.5px solid #3333ff;
+    border-radius: 10px;
+    color: #3333ff;
+    background-color: var(--bg-color-2);
+    cursor: pointer;
+}
+
+.get-in-touch-button:hover {
+    background-color: #9191fa24;
+    color: black;
+}
+
+.intro-social-media-buttons{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+}
+
+.social-media-button {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--button-color);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.social-media-button:hover {
+    background-color: #3333ff;
+}
+
+.social-media-button:hover .social-media-button-image {
+    filter: invert(1) brightness(1);
+}
+
+.social-media-button-image {
+    height: 20px;
+    width: 20px;
+    display: block;
+    filter: var(--filter);
+}
+
+.intro-image{
+    height: 80vh;
+    width: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+}

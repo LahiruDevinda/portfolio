@@ -1,0 +1,16 @@
+:root {
+    --bg-color: white;
+    --primary-font: 'Poppins', sans-serif;
+    --heading-font: 'Inter', sans-serif;
+    --gradient: linear-gradient(90deg, #ee00ff, #3333ff);
+}
+
+[data-theme="dark"] {
+    --nav-bg: rgba(18, 18, 18, 0.5);
+    --nav-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Inter', sans-serif;
+}
