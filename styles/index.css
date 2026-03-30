@@ -43,7 +43,7 @@
 
 .greeting {
     color :#3333ff;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -51,7 +51,7 @@
 
 .name {
     color: var(--text-color-main);
-    font-size: 55px;
+    font-size: 60px;
     font-weight: 700;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -67,7 +67,7 @@
 
 .intro-bio {
     color: var(--text-color-secondary);
-    font-size: 15px;
+    font-size: 20px;
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -81,8 +81,8 @@
 }
 
 .cv-button {
-    height: 50px;
-    width: 200px;
+    height: 55px;
+    width: 220px;
     color: white;
     background: var(--gradient);
     outline: none;
@@ -93,7 +93,7 @@
     justify-content: center;
     align-items: center;
     column-gap: 10px;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 600;
     cursor: pointer;
 }
@@ -109,12 +109,12 @@
 }
 
 .get-in-touch-button{
-    height: 50px;
-    width: 200px;
+    height: 55px;
+    width: 220px;
     display: flex;
     justify-content: center;
     align-items: center;
-     font-size: 18px;
+     font-size: 22px;
     font-weight: 600;
     border: 1.5px solid #3333ff;
     border-radius: 10px;
@@ -139,9 +139,9 @@
 
 .social-media-button {
     display: flex;
-    height: 40px;
-    width: 40px;
-    border-radius: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
     align-items: center;
     justify-content: center;
     background-color: var(--button-color);
@@ -160,8 +160,8 @@
 }
 
 .social-media-button-image {
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
     display: block;
     filter: var(--filter);
 }
@@ -171,20 +171,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 40px;
     padding-right: 50px;
     padding-left: 50px;
     padding-bottom: 20px;
+    height: 100vh;
 }
 
-.work-section-heading {
+.section-heading {
     font-size: 55px;
     font-weight: 500;
     color: var(--text-color-main);
     margin-bottom: 20px;
 }
 
-.work-section-sub-heading {
+.section-sub-heading {
     font-size: 20px;
     color: gray;
     max-width: 600px;
@@ -193,7 +193,7 @@
     font-family: 'Poppins', sans-serif;;
 }
 
-.work-section-title {
+.section-title {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -242,7 +242,7 @@
 .sub-heading {
     margin: 20px;
     padding-bottom: 20px;
-    font-size: 14px;
+    font-size: 18px;
     color: gray;
     font-family: 'Poppins', sans-serif;
 }
@@ -265,14 +265,198 @@
 
 .count {
     color: #3333ff;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 600;
 }
 
 .count-name {
     padding: 5px;
-    font-size: 16px;
+    font-size: 20px;
     font-family: 'Popins', sans-serif;
     font-weight: 400;
     color: gray;
+}
+
+.get-in-toch-section {
+    background-color: var(--bg-color-1);
+    padding-top: 40px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.get-in-touch-contain {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.contact-inforamtion {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.contact-information-heading {
+    color: var(--text-color-main);
+    font-size: 25px;
+    font-weight: 550;
+}
+
+.contact-information-data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.data-image-backround {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    width: 25px;
+    padding: 10px;
+    background: var(--gradient);
+    border-radius: 10px;
+}
+
+.data-image {
+    height: 20px;
+    width: 20px;
+    display: block;
+    filter: invert(1) brightness(100);
+}
+
+.data-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.data-text-heading {
+    color: var(--text-color-main);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.data-text-sub-text {
+    color: rgb(99, 99, 99);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.contact-form {
+    background-color: var(--bg-color-2);
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    max-width: 600px;
+    min-width: 50%;
+    margin-left: 50px;
+    justify-content: center;
+    align-items: stretch;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.contact-form label {
+    color: var(--text-color-main);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.input-field input {
+    height: 20px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: var(--bg-color-1);
+}
+
+.input-field textarea {
+    height: 100px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: var(--bg-color-1);
+}
+
+.input-field input:focus, .input-field textarea:focus {
+    box-shadow: 0px 0px 5px rgba(51, 51, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.input-field input::placeholder, .input-field textarea::placeholder {
+    color: rgb(99, 99, 99);
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.form-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.send-button {
+    height: 50px;
+    min-width: 50%;
+    color: white;
+    background: var(--gradient);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.send-button:hover {
+    background: var(--gradient-hover);
+    transition: all 0.3s ease;
+}
+
+.sen-button-image {
+    height: 20px;
+    width: 20px;
+    filter: invert(1) brightness(1.2);
+    display: block;
+}
+
+.contact-information-image {
+    margin-top: 10px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 10px;
+    width: 100%;
 }
