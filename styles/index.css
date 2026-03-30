@@ -13,12 +13,20 @@
 }
 
 [data-theme="dark"] {
-    --bg-color-1: aliceblue;
-    --bg-color-2: white;
-    --text-color-main: white;
+    --bg-color-1: #0f172a;
+    --bg-color-2: #111827;
+    --text-color-main: #ffffff;
+    --text-color-secondary: #cbd5e1;
+    --button-color: #1e293b;
+    --box-gradient: linear-gradient(90deg, #1e293b, #0f172a);
+    --filter: invert(1) brightness(1);
 }
 
-.intro-image{
+* {
+    box-sizing: border-box;
+}
+
+.intro-image {
     height: 80vh;
     width: 90%;
     object-fit: cover;
@@ -33,7 +41,6 @@
     justify-content: space-between;
     align-items: center;
     column-gap: 50px;
-
 }
 
 .intro-content {
@@ -42,7 +49,7 @@
 }
 
 .greeting {
-    color :#3333ff;
+    color: #3333ff;
     font-size: 25px;
     font-weight: bold;
     margin-top: 15px;
@@ -70,18 +77,21 @@
     font-size: 20px;
     margin-top: 15px;
     margin-bottom: 15px;
+    line-height: 1.7;
 }
 
 .intro-buttons {
     display: flex;
     flex-direction: row;
     column-gap: 20px;
+    row-gap: 15px;
     margin-top: 40px;
     margin-bottom: 40px;
+    flex-wrap: wrap;
 }
 
 .cv-button {
-    height: 55px;
+    min-height: 55px;
     width: 220px;
     color: white;
     background: var(--gradient);
@@ -96,6 +106,7 @@
     font-size: 22px;
     font-weight: 600;
     cursor: pointer;
+    padding: 0 20px;
 }
 
 .cv-button:hover {
@@ -108,33 +119,36 @@
     filter: invert(1) brightness(1.2);
 }
 
-.get-in-touch-button{
-    height: 55px;
+.get-in-touch-button {
+    min-height: 55px;
     width: 220px;
     display: flex;
     justify-content: center;
     align-items: center;
-     font-size: 22px;
+    font-size: 22px;
     font-weight: 600;
     border: 1.5px solid #3333ff;
     border-radius: 10px;
     color: #3333ff;
     background-color: var(--bg-color-2);
     cursor: pointer;
+    padding: 0 20px;
 }
 
 .get-in-touch-button:hover {
     background-color: #9191fa24;
-    color: black;
+    color: var(--text-color-main);
     transition: all 0.3s ease;
 }
 
-.intro-social-media-buttons{
+.intro-social-media-buttons {
     margin-top: 30px;
     margin-bottom: 30px;
     display: flex;
     flex-direction: row;
     column-gap: 20px;
+    row-gap: 15px;
+    flex-wrap: wrap;
 }
 
 .social-media-button {
@@ -148,6 +162,7 @@
     outline: none;
     border: none;
     cursor: pointer;
+    flex-shrink: 0;
 }
 
 .social-media-button:hover {
@@ -173,8 +188,9 @@
     align-items: center;
     padding-right: 50px;
     padding-left: 50px;
-    padding-bottom: 20px;
-    height: 100vh;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    min-height: 100vh;
 }
 
 .section-heading {
@@ -182,6 +198,7 @@
     font-weight: 500;
     color: var(--text-color-main);
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .section-sub-heading {
@@ -190,7 +207,8 @@
     max-width: 600px;
     text-align: center;
     margin-bottom: 40px;
-    font-family: 'Poppins', sans-serif;;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
 }
 
 .section-title {
@@ -204,12 +222,18 @@
     display: flex;
     flex-direction: row;
     column-gap: 20px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
 }
 
 .work-section-box {
     background: var(--box-gradient);
     border-radius: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    flex: 1 1 220px;
+    max-width: 280px;
 }
 
 .work-section-box:hover {
@@ -218,16 +242,22 @@
 }
 
 .box-icon {
-    height: 25px;
-    width: 25px;
+    height: 45px;
+    width: 45px;
     padding: 10px;
     background: var(--gradient);
     border-radius: 10px;
     margin-top: 20px;
     margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .box-icon-image {
+    width: 24px;
+    height: 24px;
+    display: block;
     filter: invert(1) brightness(100);
 }
 
@@ -245,6 +275,7 @@
     font-size: 18px;
     color: gray;
     font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
 }
 
 .work-section-counts {
@@ -254,6 +285,8 @@
     justify-content: space-between;
     width: 80%;
     max-width: 400px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .count-box {
@@ -275,11 +308,13 @@
     font-family: 'Popins', sans-serif;
     font-weight: 400;
     color: gray;
+    text-align: center;
 }
 
 .get-in-toch-section {
     background-color: var(--bg-color-1);
     padding-top: 40px;
+    padding-bottom: 30px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -291,6 +326,7 @@
     align-items: start;
     margin-left: 50px;
     margin-right: 50px;
+    column-gap: 40px;
 }
 
 .contact-inforamtion {
@@ -317,21 +353,21 @@
     margin-bottom: 10px;
 }
 
-.data-image-backround {
+.data-image-background {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 25px;
-    width: 25px;
-    padding: 10px;
+    width: 45px;
+    height: 45px;
     background: var(--gradient);
     border-radius: 10px;
+    flex-shrink: 0;
 }
 
 .data-image {
-    height: 20px;
-    width: 20px;
-    display: block;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
     filter: invert(1) brightness(100);
 }
 
@@ -339,6 +375,7 @@
     display: flex;
     flex-direction: column;
     row-gap: 5px;
+    min-width: 0;
 }
 
 .data-text-heading {
@@ -351,6 +388,8 @@
     color: rgb(99, 99, 99);
     font-size: 16px;
     font-weight: 400;
+    word-break: break-word;
+    line-height: 1.5;
 }
 
 .contact-form {
@@ -384,7 +423,7 @@
 }
 
 .input-field input {
-    height: 20px;
+    height: 44px;
     width: 100%;
     padding: 10px;
     border-radius: 10px;
@@ -394,21 +433,24 @@
 }
 
 .input-field textarea {
-    height: 100px;
+    min-height: 120px;
     width: 100%;
     padding: 10px;
     border-radius: 10px;
     outline: none;
     border: none;
     background-color: var(--bg-color-1);
+    resize: vertical;
 }
 
-.input-field input:focus, .input-field textarea:focus {
+.input-field input:focus,
+.input-field textarea:focus {
     box-shadow: 0px 0px 5px rgba(51, 51, 255, 0.5);
     transition: all 0.3s ease;
 }
 
-.input-field input::placeholder, .input-field textarea::placeholder {
+.input-field input::placeholder,
+.input-field textarea::placeholder {
     color: rgb(99, 99, 99);
     font-size: 14px;
     font-family: 'Poppins', sans-serif;
@@ -439,6 +481,7 @@
     align-items: center;
     justify-content: center;
     column-gap: 10px;
+    padding: 0 20px;
 }
 
 .send-button:hover {
@@ -459,4 +502,265 @@
     object-fit: cover;
     border-radius: 10px;
     width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .intro {
+        padding: 40px 32px;
+        column-gap: 30px;
+    }
+
+    .intro-content {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .name {
+        font-size: 48px;
+    }
+
+    .designation {
+        font-size: 26px;
+    }
+
+    .intro-bio {
+        font-size: 18px;
+    }
+
+    .intro-image {
+        height: 65vh;
+        width: 100%;
+    }
+
+    .work-section {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .section-heading {
+        font-size: 46px;
+    }
+
+    .section-sub-heading {
+        font-size: 18px;
+    }
+
+    .get-in-touch-contain {
+        margin-left: 32px;
+        margin-right: 32px;
+        column-gap: 24px;
+    }
+
+    .contact-form {
+        margin-left: 0;
+        min-width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column-reverse;
+        padding: 30px 20px;
+        row-gap: 30px;
+        text-align: center;
+    }
+
+    .intro-content {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .intro-image {
+        width: 100%;
+        height: auto;
+        max-height: 420px;
+    }
+
+    .greeting {
+        font-size: 22px;
+    }
+
+    .name {
+        font-size: 40px;
+        line-height: 1.2;
+    }
+
+    .designation {
+        font-size: 24px;
+    }
+
+    .intro-bio {
+        font-size: 17px;
+    }
+
+    .intro-buttons {
+        justify-content: center;
+    }
+
+    .cv-button,
+    .get-in-touch-button {
+        width: 100%;
+        max-width: 320px;
+        font-size: 18px;
+    }
+
+    .intro-social-media-buttons {
+        justify-content: center;
+    }
+
+    .work-section {
+        padding-left: 20px;
+        padding-right: 20px;
+        min-height: auto;
+    }
+
+    .section-heading {
+        font-size: 38px;
+    }
+
+    .section-sub-heading {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .work-section-boxes {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .work-section-box {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .work-section-counts {
+        width: 100%;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .count {
+        font-size: 40px;
+    }
+
+    .count-name {
+        font-size: 18px;
+    }
+
+    .get-in-toch-section {
+        padding-top: 30px;
+    }
+
+    .get-in-touch-contain {
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+        row-gap: 25px;
+    }
+
+    .contact-form {
+        max-width: 100%;
+        min-width: 100%;
+        width: 100%;
+        margin-left: 0;
+        padding: 24px 18px;
+    }
+
+    .send-button {
+        width: 100%;
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro {
+        padding: 24px 16px;
+    }
+
+    .greeting {
+        font-size: 20px;
+    }
+
+    .name {
+        font-size: 32px;
+    }
+
+    .designation {
+        font-size: 20px;
+    }
+
+    .intro-bio {
+        font-size: 15px;
+    }
+
+    .cv-button,
+    .get-in-touch-button {
+        max-width: 100%;
+        min-height: 50px;
+        font-size: 16px;
+    }
+
+    .social-media-button {
+        height: 44px;
+        width: 44px;
+    }
+
+    .social-media-button-image {
+        height: 22px;
+        width: 22px;
+    }
+
+    .section-heading {
+        font-size: 30px;
+    }
+
+    .section-sub-heading {
+        font-size: 15px;
+    }
+
+    .box-heading {
+        font-size: 17px;
+    }
+
+    .sub-heading {
+        font-size: 16px;
+    }
+
+    .count {
+        font-size: 34px;
+    }
+
+    .count-name {
+        font-size: 16px;
+    }
+
+    .contact-information-heading {
+        font-size: 22px;
+    }
+
+    .data-text-heading {
+        font-size: 16px;
+    }
+
+    .data-text-sub-text {
+        font-size: 14px;
+    }
+
+    .contact-form {
+        padding: 20px 14px;
+    }
+
+    .input-field input,
+    .input-field textarea {
+        font-size: 14px;
+    }
+
+    .send-button {
+        height: 46px;
+        font-size: 15px;
+    }
+
+    .contact-information-image {
+        height: 160px;
+    }
 }
