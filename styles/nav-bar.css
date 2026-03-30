@@ -28,7 +28,7 @@
 
 .logo {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 30px;
     margin-left: 50px;
     background: var(--gradient);
     background-clip: text;
@@ -38,12 +38,12 @@
 .menu {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
     margin-right: 50px;
 }
 
 .links {
-    font-size: 15px;
+    font-size: 18px;
     text-decoration: none;
     color: gray;
     font-weight: 400;
@@ -62,8 +62,8 @@
 
 .theme-button {
     display: flex;
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     align-items: center;
     justify-content: center;
     background-color: aliceblue;
@@ -78,7 +78,7 @@
 }
 
 .theme-image {
-    height: 12px;
-    width: 12px;
+    height: 18px;
+    width: 18px;
     display: block;
 }
