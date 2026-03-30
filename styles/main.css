@@ -14,3 +14,7 @@ body {
     background-color: var(--bg-color);
     font-family: 'Inter', sans-serif;
 }
+
+.main {
+    padding-top: 50px;
+}
