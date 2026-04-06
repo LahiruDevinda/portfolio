@@ -60,19 +60,17 @@
     padding: 30px;
     margin-bottom: 30px;
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.4s ease;
 }
 
 .story-box:hover {
     box-shadow: 0 12px 15px rgba(0, 0, 0, 0.2);
     transform: scale(1.01);
-    transition: 0.8s ease;
 }
 
 .story-box-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
     padding: 30px;
 }
 
@@ -97,9 +95,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    box-sizing: border-box;
 }
 
 .drives-heading {
@@ -113,33 +108,29 @@
 
 .drive-boxes {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    column-gap: 20px;
-    row-gap: 20px;
-    align-items: stretch;
+    gap: 20px;
     justify-content: center;
     width: 100%;
-    box-sizing: border-box;
 }
+
 .drives-content-box {
     background: var(--box-gradient);
     border-radius: 10px;
     padding: 30px;
     width: 200px;
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.4s ease;
 }
 
 .drives-content-box:hover {
-    box-shadow: 0 12px 15px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
-    transition: 0.8s ease;
+    box-shadow: 0 12px 15px rgba(0, 0, 0, 0.2);
 }
 
 .drives-content-heading {
     display: flex;
-    flex-direction: row;
-    column-gap: 10px;
+    gap: 10px;
     margin-bottom: 20px;
     align-items: center;
 }
@@ -171,7 +162,6 @@
     font-family: var(--primary-font);
     font-size: 16px;
     color: var(--text-color-secondary);
-    line-height: 1.4;
 }
 
 .tools {
@@ -179,20 +169,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    box-sizing: border-box;
     padding: 50px;
     text-align: center;
 }
 
 .tools-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
-    margin-top: 50px;
+    margin: 50px 0;
 }
 
 .tools-title-heading {
@@ -200,12 +182,123 @@
     font-size: 40px;
     font-weight: 600;
     color: var(--text-color-main);
-    margin-bottom: 20px;
 }
 
 .tools-title-sub-heading {
     font-family: var(--primary-font);
     font-size: 18px;
     color: var(--text-color-secondary);
-    line-height: 1.4;
+}
+
+.tool-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.tool-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 30px;
+    border-radius: 10px;
+    background: var(--box-gradient);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+.tool-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tool-box-title {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.tool-box-image-background {
+    width: 40px;
+    height: 40px;
+    background: var(--gradient);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tool-box-image {
+    width: 25px;
+    height: 25px;
+    filter: invert(1);
+}
+
+.tool-box-title-text {
+    font-family: var(--heading-font);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-color-main);
+}
+
+.tool {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    background: var(--box-gradient);
+}
+
+.tool-image {
+    width: 30px;
+    height: 30px;
+}
+
+.tool-name {
+    font-family: var(--primary-font);
+    font-size: 16px;
+    color: var(--text-color-main);
+}
+
+.tool-box.other-tools {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.tool-box.other-tools .tool-box-title {
+    grid-column: span 2;
+}
+
+.tool-box.other-tools .tool-box-title {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .tool-content {
+        grid-template-columns: 1fr;
+    }
+
+    .tool-box.other-tools {
+        grid-column: span 1;
+        grid-template-columns: 1fr;
+    }
+
+    .tool-box.other-tools .tool-box-title {
+        grid-column: span 1;
+    }
+
+    .heading-section-heading {
+        font-size: 40px;
+    }
 }
