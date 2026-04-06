@@ -22,6 +22,22 @@
     --filter: invert(1) brightness(1);
 }
 
+/* ================= COMMON WIDTH ================= */
+
+.story-box,
+.drive-boxes,
+.tool-content,
+.education-expirience-title,
+.timeline {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+/* ================= HEADING ================= */
+
 .heading-section {
     display: flex;
     flex-direction: column;
@@ -32,6 +48,7 @@
     background-color: var(--bg-color-1);
     width: 100%;
     min-height: 50vh;
+    box-sizing: border-box;
 }
 
 .heading-section-heading {
@@ -46,18 +63,22 @@
     font-size: 20px;
     color: var(--text-color-secondary);
     margin-bottom: 0;
+    line-height: 1.6;
 }
+
+/* ================= STORY + DRIVES WRAPPER ================= */
 
 .story-section {
     background-color: var(--bg-color-2);
-    padding: 60px 20px;
+    padding: 60px 20px 0;
+    box-sizing: border-box;
 }
 
 .story-box {
     background: var(--box-gradient);
     border-radius: 10px;
     padding: 25px;
-    margin-bottom: 0;
+    margin-bottom: 60px;
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
     transition: 0.4s ease;
 }
@@ -88,12 +109,23 @@
     line-height: 1.8;
 }
 
+.story-box-description p {
+    margin: 0 0 18px;
+}
+
+.story-box-description p:last-child {
+    margin-bottom: 0;
+}
+
+/* ================= DRIVES ================= */
+
 .drives {
-    background-color: var(--bg-color-2);
-    padding: 60px 20px;
+    background-color: transparent;
+    padding: 0 0 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .drives-heading {
@@ -101,15 +133,18 @@
     font-size: 40px;
     font-weight: 600;
     color: var(--text-color-main);
-    margin-bottom: 40px;
-    margin-top: 0;
+    margin: 0 0 40px;
+    text-align: center;
 }
 
 .drive-boxes {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 20px;
     justify-content: center;
+}
+
+.drives-content {
     width: 100%;
 }
 
@@ -117,13 +152,14 @@
     background: var(--box-gradient);
     border-radius: 10px;
     padding: 30px;
-    width: 200px;
+    min-height: 100%;
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
     transition: 0.4s ease;
+    box-sizing: border-box;
 }
 
 .drives-content-box:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     box-shadow: 0 12px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -142,6 +178,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .drives-content-image {
@@ -161,7 +198,10 @@
     font-family: var(--primary-font);
     font-size: 16px;
     color: var(--text-color-secondary);
+    line-height: 1.6;
 }
+
+/* ================= TOOLS ================= */
 
 .tools {
     background-color: var(--bg-color-1);
@@ -170,10 +210,13 @@
     align-items: center;
     padding: 60px 20px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .tools-title {
-    margin: 0 0 40px 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 40px;
 }
 
 .tools-title-heading {
@@ -188,14 +231,13 @@
     font-family: var(--primary-font);
     font-size: 18px;
     color: var(--text-color-secondary);
+    line-height: 1.6;
 }
 
 .tool-content {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
-    width: 100%;
-    max-width: 1100px;
 }
 
 .tool-box {
@@ -208,6 +250,7 @@
     background: var(--box-gradient);
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
     transition: 0.3s ease;
+    box-sizing: border-box;
 }
 
 .tool-box:hover {
@@ -219,6 +262,7 @@
     display: flex;
     gap: 10px;
     align-items: center;
+    justify-content: center;
 }
 
 .tool-box-image-background {
@@ -229,6 +273,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .tool-box-image {
@@ -249,26 +294,29 @@
     align-items: center;
     gap: 15px;
     width: 100%;
-    padding: 10px;
+    padding: 12px 14px;
     border-radius: 8px;
     background: var(--box-gradient);
+    box-sizing: border-box;
 }
 
 .tool-image {
     width: 30px;
     height: 30px;
+    flex-shrink: 0;
 }
 
 .tool-name {
     font-family: var(--primary-font);
     font-size: 16px;
     color: var(--text-color-main);
+    text-align: left;
 }
 
 .tool-box.other-tools {
     grid-column: span 3;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 15px;
 }
 
@@ -280,18 +328,21 @@
     text-align: center;
 }
 
+/* ================= EDUCATION / EXPERIENCE ================= */
+
 .education-expirience {
     background-color: var(--bg-color-2);
     padding: 60px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .education-expirience-title {
     text-align: center;
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 0;
 }
 
 .education-expirience-heading {
@@ -306,17 +357,17 @@
     font-family: var(--primary-font);
     font-size: 18px;
     color: var(--text-color-secondary);
+    line-height: 1.6;
 }
 
 .timeline-section {
     margin-top: 0;
-    padding: 20px 0 0;
+    padding: 40px 0 0;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .timeline {
-    max-width: 1200px;
-    margin: 0 auto;
     width: 100%;
 }
 
@@ -324,6 +375,10 @@
     position: relative;
     padding-left: 70px;
     margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
 }
 
 .timeline-item:hover .timeline-card {
@@ -385,6 +440,27 @@
     max-width: 900px;
 }
 
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1100px) {
+    .drive-boxes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tool-content {
+        grid-template-columns: 1fr;
+    }
+
+    .tool-box.other-tools {
+        grid-column: span 1;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tool-box.other-tools .tool-box-title {
+        grid-column: span 2;
+    }
+}
+
 @media (max-width: 900px) {
     .heading-section {
         padding: 90px 20px 50px;
@@ -400,14 +476,30 @@
     }
 
     .story-section,
-    .drives,
     .tools,
     .education-expirience {
-        padding: 40px 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .story-section {
+        padding-top: 40px;
+        padding-bottom: 0;
+    }
+
+    .drives {
+        padding-bottom: 40px;
+    }
+
+    .tools,
+    .education-expirience {
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 
     .story-box {
         padding: 20px;
+        margin-bottom: 40px;
     }
 
     .story-box-content {
@@ -428,20 +520,11 @@
     }
 
     .tools-title {
-        margin: 0 0 30px 0;
-    }
-
-    .drive-boxes {
-        justify-content: center;
+        margin-bottom: 30px;
     }
 
     .drives-content-box {
-        width: 100%;
-        max-width: 320px;
-    }
-
-    .tool-content {
-        grid-template-columns: 1fr;
+        padding: 24px;
     }
 
     .tool-box {
@@ -457,21 +540,8 @@
         padding: 12px 15px;
     }
 
-    .tool-box.other-tools {
-        grid-column: span 1;
-        grid-template-columns: 1fr;
-    }
-
-    .tool-box.other-tools .tool-box-title {
-        grid-column: span 1;
-    }
-
     .timeline-section {
-        padding: 20px 0 0;
-    }
-
-    .timeline {
-        width: 100%;
+        padding-top: 30px;
     }
 
     .timeline-item {
@@ -518,6 +588,17 @@
     }
 }
 
+@media (max-width: 700px) {
+    .drive-boxes,
+    .tool-box.other-tools {
+        grid-template-columns: 1fr;
+    }
+
+    .tool-box.other-tools .tool-box-title {
+        grid-column: span 1;
+    }
+}
+
 @media (max-width: 600px) {
     .heading-section {
         padding: 80px 15px 40px;
@@ -532,14 +613,29 @@
     }
 
     .story-section,
-    .drives,
     .tools,
     .education-expirience {
-        padding: 30px 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .story-section {
+        padding-top: 30px;
+    }
+
+    .drives {
+        padding-bottom: 30px;
+    }
+
+    .tools,
+    .education-expirience {
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     .story-box {
         padding: 16px;
+        margin-bottom: 30px;
     }
 
     .story-box-content {
@@ -559,12 +655,11 @@
     }
 
     .tools-title {
-        margin: 0 0 24px 0;
+        margin-bottom: 24px;
     }
 
     .drives-content-box {
         padding: 20px;
-        max-width: 100%;
     }
 
     .tool-box {
