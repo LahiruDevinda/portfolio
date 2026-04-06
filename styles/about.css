@@ -385,41 +385,73 @@
     max-width: 900px;
 }
 
-@media (max-width: 768px) {
-    .timeline-item {
-        padding-left: 50px;
+@media (max-width: 900px) {
+    .heading-section {
+        padding: 100px 20px 50px;
+        min-height: auto;
     }
 
-    .timeline-line {
-        left: 14px;
+    .heading-section-heading {
+        font-size: 42px;
     }
 
-    .timeline-dot {
-        left: 3px;
-        width: 22px;
-        height: 22px;
+    .heading-section-sub-heading {
+        font-size: 18px;
+        margin-bottom: 30px;
     }
 
-    .timeline-card {
-        padding: 25px 20px;
+    .story-section,
+    .drives,
+    .tools,
+    .education-expirience {
+        padding: 40px 20px;
     }
 
-    .timeline-title {
-        font-size: 20px;
+    .story-box {
+        padding: 20px;
     }
 
-    .timeline-company {
+    .story-box-content {
+        padding: 10px;
+    }
+
+    .story-box-heading,
+    .drives-heading,
+    .tools-title-heading,
+    .education-expirience-heading {
+        font-size: 32px;
+    }
+
+    .story-box-description,
+    .tools-title-sub-heading,
+    .education-expirience-sub-heading {
         font-size: 16px;
     }
 
-    .timeline-description {
-        font-size: 15px;
+    .drive-boxes {
+        justify-content: center;
     }
-}
 
-@media (max-width: 900px) {
+    .drives-content-box {
+        width: 100%;
+        max-width: 320px;
+    }
+
     .tool-content {
         grid-template-columns: 1fr;
+    }
+
+    .tool-box {
+        width: 100%;
+        padding: 25px 20px;
+    }
+
+    .tool-box-title-text {
+        font-size: 22px;
+    }
+
+    .tool {
+        padding: 12px 15px;
     }
 
     .tool-box.other-tools {
@@ -431,7 +463,150 @@
         grid-column: span 1;
     }
 
+    .timeline-section {
+        padding: 20px 0;
+    }
+
+    .timeline {
+        width: 100%;
+    }
+
+    .timeline-item {
+        padding-left: 45px;
+        margin-bottom: 30px;
+    }
+
+    .timeline-line {
+        left: 11px;
+        top: 12px;
+        width: 2px;
+    }
+
+    .timeline-dot {
+        left: 0;
+        top: 2px;
+        width: 22px;
+        height: 22px;
+    }
+
+    .timeline-card {
+        padding: 24px 20px;
+        border-radius: 12px;
+    }
+
+    .timeline-year {
+        font-size: 15px;
+        margin-bottom: 14px;
+    }
+
+    .timeline-title {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    .timeline-company {
+        font-size: 16px;
+        margin-bottom: 18px;
+    }
+
+    .timeline-description {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 600px) {
     .heading-section-heading {
-        font-size: 40px;
+        font-size: 34px;
+    }
+
+    .heading-section-sub-heading {
+        font-size: 16px;
+    }
+
+    .story-section,
+    .drives,
+    .tools,
+    .education-expirience {
+        padding: 30px 15px;
+    }
+
+    .story-box-heading,
+    .drives-heading,
+    .tools-title-heading,
+    .education-expirience-heading {
+        font-size: 28px;
+    }
+
+    .story-box-description {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .drives-content-box {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .tool-box {
+        padding: 20px 15px;
+    }
+
+    .tool-box-title {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .tool-box-title-text {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .tool {
+        gap: 12px;
+        padding: 10px 12px;
+    }
+
+    .tool-image {
+        width: 26px;
+        height: 26px;
+    }
+
+    .tool-name {
+        font-size: 15px;
+    }
+
+    .timeline-item {
+        padding-left: 35px;
+    }
+
+    .timeline-line {
+        left: 8px;
+    }
+
+    .timeline-dot {
+        left: -1px;
+        width: 18px;
+        height: 18px;
+    }
+
+    .timeline-card {
+        padding: 18px 16px;
+    }
+
+    .timeline-year {
+        font-size: 14px;
+    }
+
+    .timeline-title {
+        font-size: 18px;
+    }
+
+    .timeline-company {
+        font-size: 15px;
+    }
+
+    .timeline-description {
+        font-size: 14px;
     }
 }
