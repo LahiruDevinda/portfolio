@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="styles/nav-bar.css">
         <link rel="stylesheet" href="styles/contact.css">
 
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
     </head>
     <body>
         <nav class="nav-bar">
@@ -34,26 +36,35 @@
             </div>
 
             <div class="contact-content">
-                <div class="contact-form">
+                <form class="contact-form js-contact-form">
                     <div class="input-field">
                         <label for="name">Name</label>
                         <input type="text" id="name" class="input-name" placeholder="Your Name">
+                        <small class="error-text js-name-error"></small>
                     </div>
+
                     <div class="input-field">
                         <label for="email">Email</label>
                         <input type="email" id="email" class="input-email" placeholder="Your Email">
+                        <small class="error-text js-email-error"></small>
                     </div>
+
                     <div class="input-field">
                         <label for="message">Message</label>
                         <textarea id="message" class="input-message" placeholder="Tell Me About Your Project..." rows="5"></textarea>
+                        <small class="error-text js-message-error"></small>
                     </div>
+
                     <div class="form-button">
-                        <button class="send-button">
+                        <button type="submit" class="send-button js-send-button">
                             <img class="sen-button-image" src="images/icons/paper-plane-tilt.svg">
-                            Send
+                            <span class="js-button-text">Send</span>
                         </button>
                     </div>
-                </div>
+
+                    <div class="form-status js-form-status"></div>
+                </form>
+
                 <div class="contact-gif">
                     <img class="contact-gif-image" src="images/gif/gif.gif">
                 </div>    
@@ -63,5 +74,6 @@
 
         <script src="scripts/nav-bar.js"></script>
         <script src="scripts/theme-toggle.js"></script>
+        <script src="scripts/contact-form.js"></script>
     </body>
 </html>
