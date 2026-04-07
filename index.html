@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="styles/nav-bar.css">
         <link rel="stylesheet" href="styles/index.css">
 
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
     </head>
     <body>
         <nav class="nav-bar">
@@ -36,16 +38,16 @@
                         modern design, and user-centered solutions.
                     </div>
                     <div class="intro-buttons">
-                        <button class="cv-button">Download CV <img class="cv-button-image" src="images/icons/download-simple.svg"></button>
-                        <button class="get-in-touch-button">Get In Touch</button>
+                        <a href="" class="resource-buttons" target="_blank"><button class="cv-button">Download CV <img class="cv-button-image" src="images/icons/download-simple.svg"></button></a>
+                        <a href="#contact-form-id" class="resource-buttons"><button class="get-in-touch-button">Get In Touch</button></a>
                     </div>
                     <div class="intro-social-media-buttons">
-                        <button class="social-media-button"><img class="social-media-button-image" src="images/icons/github-logo.svg"></button>
-                        <button class="social-media-button"><img class="social-media-button-image" src="images/icons/linkedin-logo.svg"></button>
-                        <button class="social-media-button"><img class="social-media-button-image" src="images/icons/envelope-simple.svg"></button>
+                        <a href="https://github.com/LahiruDevinda" target="_blank"><button class="social-media-button"><img class="social-media-button-image" src="images/icons/github-logo.svg"></button></a>
+                        <a href="https://www.linkedin.com/in/lahiru-devinda-5273912b6" target="_blank"><button class="social-media-button"><img class="social-media-button-image" src="images/icons/linkedin-logo.svg"></button></a>
+                        <a href="mailto:lahirudevinda@gmail.com"><button class="social-media-button"><img class="social-media-button-image" src="images/icons/envelope-simple.svg"></button></a>
                     </div>
                 </div> 
-                <img class="intro-image" src="images/home/intro-image.jpg">
+                <img class="intro-image" src="images/home/intro-image.png">
             </div>
             <div class="work-section">
                 <div class="section-title">
@@ -154,31 +156,40 @@
                             <img class="contact-information-image" src="images/home/download.jpg">
                         </div>
                     </div>
-                    <div class="contact-form">
+                    <form class="contact-form js-contact-form" id="contact-form-id">
                         <div class="input-field">
                             <label for="name">Name</label>
                             <input type="text" id="name" class="input-name" placeholder="Your Name">
+                            <small class="error-text js-name-error"></small>
                         </div>
+
                         <div class="input-field">
                             <label for="email">Email</label>
                             <input type="email" id="email" class="input-email" placeholder="Your Email">
+                            <small class="error-text js-email-error"></small>
                         </div>
+
                         <div class="input-field">
                             <label for="message">Message</label>
                             <textarea id="message" class="input-message" placeholder="Tell Me About Your Project..." rows="5"></textarea>
+                            <small class="error-text js-message-error"></small>
                         </div>
+
                         <div class="form-button">
-                            <button class="send-button">
+                            <button type="submit" class="send-button js-send-button">
                                 <img class="sen-button-image" src="images/icons/paper-plane-tilt.svg">
-                                Send
+                                <span class="js-button-text">Send</span>
                             </button>
                         </div>
-                    </div>
+
+                        <div class="form-status js-form-status"></div>
+                    </form>
                 </div>
             </div>
         </div>
 
         <script src="scripts/nav-bar.js"></script>
         <script src="scripts/theme-toggle.js"></script>
+        <script src="scripts/contact-form.js"></script>
     </body>
 </html>
